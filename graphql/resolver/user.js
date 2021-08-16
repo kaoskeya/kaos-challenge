@@ -1,6 +1,10 @@
 module.exports = {
+  Query: {
+    getUser: async (_, args, { dataSources }) => 
+      dataSources.userAPI.getUser(args.id),
+  },
   Mutation: {
-    insert_user_one: async (_, args, { dataSources }) =>
-      dataSources.userAPI.updateUser(args.object),
+    insertUser: async (_, args, { dataSources }) =>
+      dataSources.userAPI.insertUser(args.object),
   },
 };

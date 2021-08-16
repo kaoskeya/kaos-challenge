@@ -1,6 +1,11 @@
 module.exports = `#graphql
+  extend type Query {
+    getUser(id: Int): User
+    getUsers: [User]
+  }
+
   extend type Mutation {
-    insert_user_one(object: UserInput!): User!
+    insertUser(object: UserInput!): User!
   }
 
   input UserInput {
