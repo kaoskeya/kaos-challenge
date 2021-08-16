@@ -1,7 +1,7 @@
 const typeDefs = require("./schema");
 const resolvers = require("./resolver");
 const { ApolloServer } = require("apollo-server-express");
-import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
+const { ApolloServerPluginLandingPageGraphQLPlayground } = require("apollo-server-core");
 
 const userAPI = require("./controller/user");
 
