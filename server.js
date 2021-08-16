@@ -1,4 +1,5 @@
 const app = require("express")();
+require("dotenv").config();
 
 const graphqlPath = process.env.GQL_PATH || "/graphql";
 const port = process.env.PORT || 3000;
