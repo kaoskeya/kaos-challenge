@@ -1,5 +1,10 @@
 const app = require("express")();
 require("dotenv").config();
+const db = require("./db/models");
+
+db.sequelize.sync().then(() => {
+  console.log(`Database connected!`);
+});
 
 const graphqlPath = process.env.GQL_PATH || "/graphql";
 const port = process.env.PORT || 3000;
